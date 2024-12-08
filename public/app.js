@@ -84,4 +84,5 @@
       messageContainer.scrollHeight - messageContainer.clientHeight;
   }
 })();
-//24:36
+
+// To run app: npm start
