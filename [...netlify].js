@@ -22,7 +22,7 @@ exports.handler = (event, context) => {
   });
 
   return new Promise((resolve) => {
-    server.listen(process.env.PORT || 3000, () => {
+    server.listen(process.env.PORT || 5000, () => {
       resolve('Server started');
     });
   });
