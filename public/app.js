@@ -16,6 +16,7 @@
       app.querySelector('.join_screen').classList.remove('active');
       app.querySelector('.chat_screen').classList.add('active');
     });
+
   app
     .querySelector('.chat_screen #send_message')
     .addEventListener('click', function () {
@@ -33,6 +34,21 @@
       });
       app.querySelector('.chat_screen #message_input').value = '';
     });
+
+  app
+    .querySelector('.chat_screen #exit_chat')
+    .addEventListener('click', function () {
+      socket.emit('exituser', uname);
+      window.location.href = window.location.href;
+    });
+
+  socket.on('update', function (update) {
+    renderMessage('update', update);
+  });
+
+  socket.on('chat', function (message) {
+    renderMessage('other', message);
+  });
 
   function renderMessage(type, message) {
     let messageContainer = app.querySelector('.chat_screen .messages');
