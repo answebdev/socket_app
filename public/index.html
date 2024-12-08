@@ -10,7 +10,7 @@
 
 <body>
     <div class="app">
-        <div class="screen join_screen">
+        <div class="screen join_screen active">
             <div class="form">
                 <h2>Join Chatroom</h2>
                 <div class="form_input">
@@ -22,14 +22,14 @@
                 </div>
             </div>
         </div>
-        <div class="screen chat_screen active">
+        <div class="screen chat_screen">
             <div class="header">
                 <div class="logo">Chatroom</div>
                 <button id="exit_chat">Exit</button>
             </div>
             <div class="messages">
                 <!-- Dummy Messages -->
-                <div class="message my_message">
+                <!-- <div class="message my_message">
                     <div>
                         <div class="name">You</div>
                         <div class="text">Hi</div>
@@ -43,7 +43,7 @@
                         <div class="name">John Doe</div>
                         <div class="text">Hi</div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="typebox">
                 <input type="text" id="message_input">
@@ -55,7 +55,7 @@
 
 
     <script type="text/javascript" src="socket.io/socket.io.js"></script>
-    <script type="text/javascript" src="code.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 </body>
 
 </html>
