@@ -20,6 +20,6 @@ io.on('connection', function (socket) {
   });
 });
 
-server.listen(5000);
+server.listen('https://quetal.netlify.app/');
 
 // To run app: npm start
